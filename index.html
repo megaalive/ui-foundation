@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fb">
+  <meta name="description" content="UI Foundation: a minimal, vanilla design system for consistent developer tools, dashboards, and workspaces.">
+  <title>UI Foundation — Component Catalog</title>
+  <link rel="stylesheet" href="./foundation/tokens.css">
+  <link rel="stylesheet" href="./foundation/base.css">
+  <link rel="stylesheet" href="./foundation/components.css">
+  <link rel="stylesheet" href="./foundation/profiles.css">
+  <link rel="stylesheet" href="./demo/demo.css">
+  <script type="module" src="./demo/demo.js"></script>
+</head>
+<body class="ui-root showcase" id="showcase">
+  <a href="#main" class="ui-sr-only skip-link">Skip to content</a>
+  <div class="showcase__layout">
+    <aside class="showcase__sidebar" id="sidebar" aria-label="Catalog navigation">
+      <a class="showcase__brand" href="#overview">
+        <span class="showcase__brandmark" aria-hidden="true">u<span style="font-size:.78em; transform:translateY(3px)">i</span></span>
+        <span><strong>UI Foundation</strong><small>Design language / v0.1</small></span>
+      </a>
+      <p class="showcase__nav-label">Explore</p>
+      <nav class="showcase__nav" aria-label="Sections">
+        <a href="#overview"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg>Overview</a>
+        <a href="#appearance"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z"/></svg>Appearance</a>
+        <a href="#components"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M9 10v10"/></svg>Components</a>
+        <a href="#forms"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h7"/><circle cx="18" cy="16" r="3"/></svg>Inputs</a>
+        <a href="#data"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 16l4-5 4 2 5-7"/></svg>Data display</a>
+        <a href="#patterns"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12"/></svg>Patterns</a>
+        <a href="#adoption"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 17l-5-5 5-5M16 7l5 5-5 5M14 4l-4 16"/></svg>Use in a project</a>
+      </nav>
+      <p class="showcase__nav-label">Reference</p>
+      <nav class="showcase__nav" aria-label="Reference links">
+        <a href="https://github.com/megaalive/ui-foundation" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 15l4-6 4 6"/></svg>Repository ↗</a>
+        <a href="https://github.com/megaalive/ui-foundation/blob/main/docs/ADOPTION.md" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h12l3 3v13H5zM8 12h9M8 16h6"/></svg>Adoption guide ↗</a>
+      </nav>
+      <div class="showcase__sidebar-bottom">
+        <span class="ui-badge ui-badge--positive">Foundation / ready to test</span>
+        <p>Designed for steady interfaces. No framework, CDN, fonts, or build tooling required.</p>
+        <a href="https://github.com/kuratlielia/arc-library" target="_blank" rel="noopener noreferrer" class="ui-muted" style="font-size:.74rem">Inspired by Arc's calm design ↗</a>
+      </div>
+    </aside>
+    <div class="showcase__main">
+      <header class="showcase__topbar">
+        <div class="ui-cluster">
+          <button class="ui-button ui-button--quiet ui-button--icon showcase__menu" id="menu-button" aria-expanded="false" aria-controls="sidebar" type="button" aria-label="Open navigation">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+          <div class="showcase__breadcrumb"><span>System</span><span aria-hidden="true">/</span><strong>Component catalog</strong></div>
+        </div>
+        <div class="showcase__top-actions">
+          <a class="showcase__github" href="https://github.com/megaalive/ui-foundation" target="_blank" rel="noopener noreferrer">View source ↗</a>
+          <label for="theme-select" class="ui-sr-only">Color theme</label>
+          <select id="theme-select" class="ui-select" aria-label="Color theme">
+            <option value="system">System theme</option>
+            <option value="light">Light theme</option>
+            <option value="dark">Dark theme</option>
+            <option value="contrast">High contrast</option>
+          </select>
+        </div>
+      </header>
+      <main class="showcase__content" id="main">
+        <section id="overview" aria-labelledby="hero-heading">
+          <div class="showcase__hero">
+            <div class="showcase__hero-copy">
+              <span class="showcase__eyebrow">Clarity is a feature · v0.1</span>
+              <h1 id="hero-heading">One system.<br><em>Every interface.</em></h1>
+              <p class="showcase__lead">A quiet, cohesive design foundation for tools that do serious work. One visual language across observatories, infrastructure consoles, and creative workspaces.</p>
+              <div class="showcase__hero-actions">
+                <a href="#components" class="ui-button ui-button--primary">Browse components <span aria-hidden="true">↗</span></a>
+                <a href="#adoption" class="ui-button">Get started <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <div class="showcase__preview" aria-label="Illustrative metrics preview, not live monitoring data">
+              <div class="showcase__preview-header"><strong>Environment pulse <span class="ui-micro" style="margin-left:.4rem">/ SAMPLE</span></strong><div class="showcase__dots" aria-hidden="true"><span></span><span></span><span></span></div></div>
+              <div class="ui-split"><div><span class="ui-micro">Illustrative requests</span><div style="font-size:1.7rem;font-weight:760;letter-spacing:-.06em;line-height:1.35">24,892 <span style="font-size:.72rem;color:var(--ui-positive);letter-spacing:0">+12.8%</span></div></div><span class="ui-badge ui-badge--positive">Healthy</span></div>
+              <svg class="showcase__chart" viewBox="0 0 340 140" role="img" aria-label="Example chart showing increasing requests. These are illustrative numbers, not production metrics.">
+                <path class="showcase__chart-grid" d="M0 25H340M0 65H340M0 105H340"/>
+                <path class="showcase__chart-fill" d="M0 112L25 100 48 104 75 81 100 90 122 68 148 76 173 61 200 72 223 40 249 54 275 29 302 41 340 18V140H0Z"/>
+                <path class="showcase__chart-line" d="M0 112L25 100 48 104 75 81 100 90 122 68 148 76 173 61 200 72 223 40 249 54 275 29 302 41 340 18"/>
+                <circle class="showcase__chart-dot" cx="340" cy="18" r="5"/>
+              </svg>
+              <div class="showcase__preview-numbers"><div><small>Mean latency</small><strong>38 ms</strong></div><div><small>Success rate</small><strong>99.8%</strong></div></div>
+            </div>
+          </div>
+          <div class="showcase__facts" aria-label="Foundation characteristics">
+            <span>◆ <b>Zero</b> runtime dependencies</span>
+            <span>◈ <b>Three</b> interface profiles</span>
+            <span>◉ <b>Three</b> color themes</span>
+            <span>↗ <b>Native</b> browser controls</span>
+          </div>
+        </section>
+
+        <section class="showcase__section" id="appearance" aria-labelledby="appearance-heading">
+          <div class="showcase__section-head"><div><span class="showcase__eyebrow">01 / Identity</span><h2 id="appearance-heading">Appearance, without fragmentation.</h2><p>One token contract. Choose a density profile and accent without inventing another component library.</p></div><span class="ui-badge ui-badge--neutral">Interactive</span></div>
+          <div class="showcase__grid showcase__grid--two">
+            <div class="ui-card">
+              <h3 class="ui-card__title">Density profile</h3>
+              <p class="ui-card__description">Changes component spacing and control height immediately.</p>
+              <div class="showcase__profile-options showcase__sample-field" role="group" aria-label="Select density profile">
+                <button class="ui-button ui-button--small" type="button" data-profile="studio" aria-pressed="true">Studio</button>
+                <button class="ui-button ui-button--small" type="button" data-profile="console" aria-pressed="false">Console</button>
+                <button class="ui-button ui-button--small" type="button" data-profile="workspace" aria-pressed="false">Workspace</button>
+              </div>
+              <p class="ui-field__hint" style="margin:.95rem 0 0">Active profile: <strong id="active-profile">studio</strong></p>
+            </div>
+            <div class="ui-card">
+              <h3 class="ui-card__title">Accent color</h3>
+              <p class="ui-card__description">Brand differences are intentional; semantics stay consistent.</p>
+              <div class="showcase__accent-list" role="group" aria-label="Select accent color">
+                <button type="button" class="showcase__accent-button" data-accent-choice="blue" aria-label="Blue accent" aria-pressed="true"></button>
+                <button type="button" class="showcase__accent-button" data-accent-choice="violet" aria-label="Violet accent" aria-pressed="false"></button>
+                <button type="button" class="showcase__accent-button" data-accent-choice="jade" aria-label="Jade accent" aria-pressed="false"></button>
+                <button type="button" class="showcase__accent-button" data-accent-choice="amber" aria-label="Amber accent" aria-pressed="false"></button>
+              </div>
+              <div class="showcase__swatches" aria-label="Semantic token swatches">
+                <div class="showcase__swatch"><span class="showcase__swatch-color" style="background:var(--ui-bg)"></span><small>Background</small></div>
+                <div class="showcase__swatch"><span class="showcase__swatch-color" style="background:var(--ui-surface)"></span><small>Surface</small></div>
+                <div class="showcase__swatch"><span class="showcase__swatch-color" style="background:var(--ui-accent)"></span><small>Accent</small></div>
+                <div class="showcase__swatch"><span class="showcase__swatch-color" style="background:var(--ui-positive)"></span><small>Positive</small></div>
+                <div class="showcase__swatch"><span class="showcase__swatch-color" style="background:var(--ui-negative)"></span><small>Negative</small></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="showcase__section" id="components" aria-labelledby="components-heading">
+          <div class="showcase__section-head"><div><span class="showcase__eyebrow">02 / Primitives</span><h2 id="components-heading">Subtle where it should be.</h2><p>Composable building blocks. Nothing depends on a CSS-in-JS engine or UI runtime.</p></div></div>
+          <div class="showcase__grid">
+            <article class="ui-card showcase__component-card"><h3>Buttons</h3><p>Primary actions stay recognizable.</p><div class="showcase__component-demo"><button class="ui-button ui-button--primary" type="button" data-show-toast>Save change</button><button class="ui-button" type="button">Secondary</button><button class="ui-button ui-button--quiet" type="button">Quiet</button><button class="ui-button" type="button" disabled>Disabled</button></div></article>
+            <article class="ui-card showcase__component-card"><h3>Statuses</h3><p>Semantic state without relying on color alone.</p><div class="showcase__component-demo"><span class="ui-badge ui-badge--positive">Healthy</span><span class="ui-badge ui-badge--warning">Pending</span><span class="ui-badge ui-badge--negative">Failed</span><span class="ui-badge ui-badge--neutral">Draft</span></div></article>
+            <article class="ui-card showcase__component-card"><h3>Dialog and feedback</h3><p>Native modal semantics and unobtrusive notifications.</p><div class="showcase__component-demo"><button class="ui-button" type="button" data-open-dialog>Open dialog</button><button class="ui-button ui-button--quiet" type="button" data-show-toast>Show toast ↗</button></div></article>
+            <article class="ui-card showcase__component-card"><h3>Progress</h3><p>Clear progress values for processes with known completion.</p><div class="showcase__component-demo--stack"><div class="ui-split"><span class="ui-muted" style="font-size:.78rem">Import verification</span><strong class="ui-mono" style="font-size:.78rem">72%</strong></div><progress class="ui-progress" value="72" max="100" aria-label="Import verification example">72%</progress><span class="ui-field__hint">Illustrative process · no live import</span></div></article>
+            <article class="ui-card showcase__component-card"><h3>Information notice</h3><p>State plus an actionable explanation.</p><div class="ui-notice ui-notice--positive"><div aria-hidden="true">✓</div><div><strong>Validation complete</strong><p>All sample entries match the expected shape.</p></div></div></article>
+            <article class="ui-card showcase__component-card"><h3>Keyboard-first</h3><p>Visible focus, native controls, predictable keys.</p><div class="showcase__component-demo"><kbd class="ui-kbd">Tab</kbd><kbd class="ui-kbd">Enter</kbd><kbd class="ui-kbd">Esc</kbd><span class="ui-muted" style="font-size:.8rem">Use your keyboard to try the samples.</span></div></article>
+          </div>
+        </section>
+
+        <section class="showcase__section" id="forms" aria-labelledby="forms-heading">
+          <div class="showcase__section-head"><div><span class="showcase__eyebrow">03 / Inputs</span><h2 id="forms-heading">Functional, familiar controls.</h2><p>Native, correctly labeled fields. This form does not send data anywhere.</p></div></div>
+          <div class="showcase__grid showcase__grid--two">
+            <form class="ui-card ui-stack" id="demo-form">
+              <div class="ui-field"><label class="ui-field__label" for="project-name">Project name</label><input class="ui-input" id="project-name" name="project" type="text" placeholder="e.g. MonTraIn" required maxlength="80"><span class="ui-field__hint">Name used only in this local demo.</span></div>
+              <div class="ui-field"><label class="ui-field__label" for="environment">Environment</label><select class="ui-select" id="environment" name="environment"><option value="dev">Development</option><option value="staging">Staging</option><option value="production">Production</option></select></div>
+              <label class="ui-check"><input type="checkbox" name="notifications" checked><span>Send operational notices (demo only)</span></label>
+              <div><button class="ui-button ui-button--primary" type="submit">Validate form</button></div>
+            </form>
+            <div class="ui-card ui-stack"><div><h3 class="ui-card__title">Control states</h3><p class="ui-card__description">Switches and fields should remain obvious across themes.</p></div><label class="ui-switch"><input type="checkbox" checked><span class="ui-switch__track" aria-hidden="true"></span><span>Enable live updates</span></label><label class="ui-switch"><input type="checkbox"><span class="ui-switch__track" aria-hidden="true"></span><span>Show advanced details</span></label><div class="ui-field"><label class="ui-field__label" for="disabled-field">Disabled input</label><input class="ui-input" id="disabled-field" disabled value="Read-only system value"></div><div class="ui-field"><label class="ui-field__label" for="notes">Notes</label><textarea class="ui-textarea" id="notes" placeholder="Keep instructions concise..."></textarea></div></div>
+          </div>
+        </section>
+
+        <section class="showcase__section" id="data" aria-labelledby="data-heading">
+          <div class="showcase__section-head"><div><span class="showcase__eyebrow">04 / Data</span><h2 id="data-heading">Built to tell the truth.</h2><p>Tables, metrics, and status must be legible before decoration. Values below are illustrative.</p></div><span class="ui-badge ui-badge--neutral">Sample data</span></div>
+          <div class="showcase__grid">
+            <article class="ui-card"><span class="ui-micro">Devices available</span><strong class="ui-metric__value">423</strong><p class="ui-metric__note">Illustrative infrastructure data</p></article>
+            <article class="ui-card"><span class="ui-micro">Checks passed</span><strong class="ui-metric__value">98.6%</strong><p class="ui-metric__note">Example validation result</p></article>
+            <article class="ui-card"><span class="ui-micro">Median response</span><strong class="ui-metric__value">18.4 ms</strong><p class="ui-metric__note">Example metric, not measured</p></article>
+          </div>
+          <div class="ui-card" style="margin-top:var(--ui-density-gap)">
+            <div class="showcase__data-top"><div><h3 class="ui-card__title">Source health</h3><p class="ui-card__description">A compact, accessible table with explicit state labels.</p></div><button class="ui-button ui-button--small" type="button" data-show-toast>Refresh sample ↻</button></div>
+            <div class="ui-table-wrap"><table class="ui-table"><thead><tr><th scope="col">Source</th><th scope="col">Class</th><th scope="col">Last sample</th><th scope="col" class="ui-number">Latency</th><th scope="col">Status</th></tr></thead><tbody><tr><td><strong>Network / East</strong></td><td class="ui-muted">Collector</td><td class="ui-mono">10:42:01</td><td class="ui-number">18 ms</td><td><span class="ui-badge ui-badge--positive">Healthy</span></td></tr><tr><td><strong>Network / West</strong></td><td class="ui-muted">Collector</td><td class="ui-mono">10:41:56</td><td class="ui-number">26 ms</td><td><span class="ui-badge ui-badge--positive">Healthy</span></td></tr><tr><td><strong>Camera / Core</strong></td><td class="ui-muted">Polling</td><td class="ui-mono">10:40:12</td><td class="ui-number">—</td><td><span class="ui-badge ui-badge--warning">Waiting</span></td></tr><tr><td><strong>Archive / Node</strong></td><td class="ui-muted">Storage</td><td class="ui-mono">10:39:48</td><td class="ui-number">—</td><td><span class="ui-badge ui-badge--negative">Unavailable</span></td></tr></tbody></table></div>
+          </div>
+        </section>
+
+        <section class="showcase__section" id="patterns" aria-labelledby="patterns-heading">
+          <div class="showcase__section-head"><div><span class="showcase__eyebrow">05 / Interaction</span><h2 id="patterns-heading">Progressive, not excessive.</h2><p>Motion and interactivity explain state changes. Static HTML remains meaningful.</p></div></div>
+          <div class="showcase__grid showcase__grid--two">
+            <div class="ui-card">
+              <div role="tablist" class="ui-tabs" aria-label="Example data views">
+                <button class="ui-tab" role="tab" id="tab-summary" aria-controls="panel-summary" aria-selected="true" tabindex="0">Summary</button>
+                <button class="ui-tab" role="tab" id="tab-evidence" aria-controls="panel-evidence" aria-selected="false" tabindex="-1">Evidence</button>
+                <button class="ui-tab" role="tab" id="tab-configuration" aria-controls="panel-configuration" aria-selected="false" tabindex="-1">Configuration</button>
+              </div>
+              <section id="panel-summary" role="tabpanel" aria-labelledby="tab-summary" tabindex="0" style="margin-top:1.1rem"><h3 class="ui-card__title">Compact overview</h3><p class="ui-card__description">A short, readable summary with no extraneous animation. Arrow keys switch tabs.</p></section>
+              <section id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence" tabindex="0" hidden style="margin-top:1.1rem"><h3 class="ui-card__title">Visible provenance</h3><p class="ui-card__description">Real applications should link to the exact run, commit, or data source behind a displayed result.</p></section>
+              <section id="panel-configuration" role="tabpanel" aria-labelledby="tab-configuration" tabindex="0" hidden style="margin-top:1.1rem"><h3 class="ui-card__title">Explicit configuration</h3><p class="ui-card__description">State belongs to the application. Foundation provides appearance primitives, not hidden business logic.</p></section>
+            </div>
+            <div class="ui-card"><h3 class="ui-card__title">Design promises</h3><p class="ui-card__description" style="margin-bottom:1.2rem">Guardrails for every consuming project.</p><div class="showcase__rule"><span class="num">01</span><span>Readable on mobile, mouse, touch, and keyboard.</span></div><div class="showcase__rule"><span class="num">02</span><span>Reduced motion is honored automatically.</span></div><div class="showcase__rule"><span class="num">03</span><span>Colors never carry critical state alone.</span></div><div class="showcase__rule"><span class="num">04</span><span>Operational layouts favor clarity over spectacle.</span></div></div>
+          </div>
+        </section>
+
+        <section class="showcase__section" id="adoption" aria-labelledby="adoption-heading">
+          <div class="showcase__section-head"><div><span class="showcase__eyebrow">06 / Adoption</span><h2 id="adoption-heading">Add only what you need.</h2><p>Vendor the versioned foundation files. Keep application-specific behavior and layout inside the application.</p></div><button type="button" class="ui-button ui-button--small" data-copy-code>Copy snippet</button></div>
+          <pre class="showcase__code" id="usage-code"><code>&lt;link rel="stylesheet" href="./foundation/tokens.css"&gt;
+&lt;link rel="stylesheet" href="./foundation/base.css"&gt;
+&lt;link rel="stylesheet" href="./foundation/components.css"&gt;
+&lt;link rel="stylesheet" href="./foundation/profiles.css"&gt;
+
+&lt;main class="ui-root" data-ui-profile="console"&gt;
+  &lt;section class="ui-card"&gt;
+    &lt;h2&gt;Source status&lt;/h2&gt;
+    &lt;button class="ui-button ui-button--primary" type="button"&gt;
+      Refresh
+    &lt;/button&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+          <div class="ui-notice" style="margin-top:1rem"><span aria-hidden="true">↗</span><div><strong>Migration is opt-in.</strong><p>Start with one isolated page. Verify screenshots, semantics, and performance before sharing components across repositories.</p></div></div>
+        </section>
+        <footer class="showcase__footer"><span>© <span id="year">2026</span> UI Foundation · Vanilla by design.</span><span>Independent implementation · Arc Library acknowledged as inspiration · MIT</span></footer>
+      </main>
+    </div>
+  </div>
+  <dialog id="example-dialog" class="ui-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
+    <div class="ui-dialog__inner"><span class="showcase__eyebrow">Native HTML dialog</span><h2 id="dialog-title" style="margin:.6rem 0">A calmer confirmation.</h2><p id="dialog-desc" class="ui-muted" style="font-size:.88rem;margin:0">Keyboard focus, Escape handling, and modal semantics come from the browser. This demo does not perform an action.</p><form method="dialog" class="ui-dialog__actions"><button class="ui-button" value="cancel">Cancel</button><button class="ui-button ui-button--primary" value="ok">Looks good</button></form></div>
+  </dialog>
+  <div id="toast-area" class="ui-toast-area" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

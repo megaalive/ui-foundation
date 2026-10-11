@@ -1,0 +1,28 @@
+/* Density profiles modify the same primitives; they do not replace a product's layout. */
+.ui-root [data-ui-profile="studio"], .ui-root[data-ui-profile="studio"] {
+  --ui-control-height: 2.9rem;
+  --ui-density-gap: 1.25rem;
+  --ui-panel-padding: 1.75rem;
+}
+.ui-root [data-ui-profile="console"], .ui-root[data-ui-profile="console"] {
+  --ui-control-height: 2.45rem;
+  --ui-density-gap: .85rem;
+  --ui-panel-padding: 1.15rem;
+}
+.ui-root [data-ui-profile="workspace"], .ui-root[data-ui-profile="workspace"] {
+  --ui-control-height: 2.35rem;
+  --ui-density-gap: .7rem;
+  --ui-panel-padding: .95rem;
+}
+.ui-root [data-ui-profile="console"] .ui-table th,
+.ui-root [data-ui-profile="console"] .ui-table td,
+.ui-root[data-ui-profile="console"] .ui-table th,
+.ui-root[data-ui-profile="console"] .ui-table td { padding-block: .62rem; }
+.ui-root [data-ui-profile="workspace"] .ui-card,
+.ui-root[data-ui-profile="workspace"] .ui-card { border-radius: var(--ui-radius-sm); }
+.ui-root [data-ui-profile="workspace"] .ui-button,
+.ui-root[data-ui-profile="workspace"] .ui-button { border-radius: var(--ui-radius-xs); }
+.ui-root [data-ui-profile="workspace"] .ui-table th,
+.ui-root [data-ui-profile="workspace"] .ui-table td,
+.ui-root[data-ui-profile="workspace"] .ui-table th,
+.ui-root[data-ui-profile="workspace"] .ui-table td { padding-block: .5rem; }

@@ -1,0 +1,14 @@
+{
+  "name": "ui-foundation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Vanilla HTML, CSS, and JavaScript design foundation",
+  "license": "MIT",
+  "scripts": {
+    "check": "node --check foundation/foundation.js && node --check demo/demo.js && node --test tests/foundation.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,39 @@
+/* Opt-in base styles: put class="ui-root" on the application's UI container. */
+.ui-root, .ui-root *, .ui-root *::before, .ui-root *::after { box-sizing: border-box; }
+.ui-root {
+  background: var(--ui-bg);
+  color: var(--ui-ink);
+  font: 400 1rem/1.55 var(--ui-font);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.ui-root :where(h1,h2,h3,h4,p,ul,ol) { margin-block-start: 0; }
+.ui-root :where(h1,h2,h3,h4) { color: var(--ui-ink-strong); line-height: 1.2; letter-spacing: -.035em; }
+.ui-root :where(button,input,select,textarea) { font: inherit; }
+.ui-root :where(button) { cursor: pointer; }
+.ui-root :where(button:disabled) { cursor: not-allowed; }
+.ui-root :where(a) { color: var(--ui-accent-strong); text-underline-offset: .18em; }
+.ui-root :where(a:hover) { text-decoration-thickness: 2px; }
+.ui-root :where(:focus-visible) { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
+.ui-root :where([hidden]) { display: none !important; }
+.ui-root ::selection { background: var(--ui-accent-soft); color: var(--ui-ink-strong); }
+.ui-root :where(code,pre,kbd,samp) { font-family: var(--ui-mono); }
+.ui-root :where(code) { font-size: .9em; }
+.ui-root :where(pre) { overflow: auto; max-width: 100%; }
+.ui-root :where(svg) { display: block; }
+.ui-root :where(hr) { border: 0; border-top: 1px solid var(--ui-line); }
+.ui-root .ui-muted { color: var(--ui-ink-secondary); }
+.ui-root .ui-micro { color: var(--ui-ink-muted); font: 650 .72rem/1.4 var(--ui-mono); letter-spacing: .045em; text-transform: uppercase; }
+.ui-root .ui-mono { font-family: var(--ui-mono); font-variant-numeric: tabular-nums; }
+.ui-root .ui-sr-only {
+  position: absolute !important;
+  width: 1px !important; height: 1px !important;
+  overflow: hidden !important; clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important; padding: 0 !important; border: 0 !important;
+}
+.ui-root .ui-stack { display: flex; flex-direction: column; gap: var(--ui-density-gap); }
+.ui-root .ui-cluster { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+.ui-root .ui-split { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+@media (max-width: 640px) {
+  .ui-root .ui-split { align-items: flex-start; flex-wrap: wrap; }
+}

@@ -1,0 +1,162 @@
+/* UI Foundation / semantic design tokens v0.1.0. No imported fonts or resources. */
+:root {
+  color-scheme: light;
+  --ui-bg: #f7f8fb;
+  --ui-canvas: #f1f4fa;
+  --ui-surface: #ffffff;
+  --ui-surface-raised: #ffffff;
+  --ui-surface-muted: #f1f3f8;
+  --ui-ink: #192333;
+  --ui-ink-strong: #101827;
+  --ui-ink-secondary: #56647a;
+  --ui-ink-muted: #6d7890;
+  --ui-line: #e2e7f0;
+  --ui-line-strong: #c9d1df;
+  --ui-accent: #3b61da;
+  --ui-accent-strong: #294bbb;
+  --ui-accent-ink: #ffffff;
+  --ui-accent-soft: #e9efff;
+  --ui-focus: #315ee0;
+  --ui-positive: #147d5c;
+  --ui-positive-soft: #e7f8ef;
+  --ui-warning: #93600a;
+  --ui-warning-soft: #fff4d9;
+  --ui-negative: #b93c4e;
+  --ui-negative-soft: #ffebef;
+  --ui-chart-1: #5476e9;
+  --ui-chart-2: #15a18c;
+  --ui-chart-3: #e3a044;
+  --ui-chart-4: #9b6bda;
+  --ui-shadow-sm: 0 1px 2px rgb(26 40 70 / .04), 0 4px 12px rgb(26 40 70 / .03);
+  --ui-shadow-lg: 0 18px 48px rgb(35 52 90 / .09), 0 3px 9px rgb(35 52 90 / .03);
+  --ui-font: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ui-mono: ui-monospace, "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  --ui-space-1: .25rem;
+  --ui-space-2: .5rem;
+  --ui-space-3: .75rem;
+  --ui-space-4: 1rem;
+  --ui-space-5: 1.25rem;
+  --ui-space-6: 1.5rem;
+  --ui-space-8: 2rem;
+  --ui-space-10: 2.5rem;
+  --ui-space-12: 3rem;
+  --ui-radius-xs: .5rem;
+  --ui-radius-sm: .75rem;
+  --ui-radius-md: 1rem;
+  --ui-radius-lg: 1.375rem;
+  --ui-radius-xl: 1.75rem;
+  --ui-radius-pill: 999px;
+  --ui-control-height: 2.75rem;
+  --ui-density-gap: 1rem;
+  --ui-panel-padding: 1.5rem;
+  --ui-motion-fast: 140ms;
+  --ui-motion-normal: 230ms;
+  --ui-ease: cubic-bezier(.2,.8,.2,1);
+  --ui-wash: radial-gradient(ellipse at 75% 10%, rgb(122 148 239 / .10), transparent 52%), radial-gradient(ellipse at 4% 0%, rgb(240 177 172 / .08), transparent 45%);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ui-bg: #101723;
+  --ui-canvas: #0d1420;
+  --ui-surface: #192333;
+  --ui-surface-raised: #202c3f;
+  --ui-surface-muted: #243248;
+  --ui-ink: #ebf0f8;
+  --ui-ink-strong: #ffffff;
+  --ui-ink-secondary: #afbdd2;
+  --ui-ink-muted: #91a4bd;
+  --ui-line: #324157;
+  --ui-line-strong: #49617c;
+  --ui-accent: #96b0ff;
+  --ui-accent-strong: #b5c8ff;
+  --ui-accent-ink: #101c35;
+  --ui-accent-soft: #283c65;
+  --ui-focus: #abc2ff;
+  --ui-positive: #75dbb5;
+  --ui-positive-soft: #1c443e;
+  --ui-warning: #f2c678;
+  --ui-warning-soft: #463920;
+  --ui-negative: #ffa5ad;
+  --ui-negative-soft: #4b2a37;
+  --ui-chart-1: #88a4ff;
+  --ui-chart-2: #54caba;
+  --ui-chart-3: #f0b46c;
+  --ui-chart-4: #b59bed;
+  --ui-shadow-sm: 0 1px 4px rgb(0 0 0 / .18);
+  --ui-shadow-lg: 0 18px 56px rgb(0 0 0 / .25);
+  --ui-wash: radial-gradient(ellipse at 80% 12%, rgb(75 110 199 / .13), transparent 58%), radial-gradient(ellipse at 4% 2%, rgb(168 111 153 / .07), transparent 55%);
+}
+
+:root[data-theme="contrast"] {
+  color-scheme: dark;
+  --ui-bg: #000000;
+  --ui-canvas: #000000;
+  --ui-surface: #000000;
+  --ui-surface-raised: #0b0b0b;
+  --ui-surface-muted: #161616;
+  --ui-ink: #ffffff;
+  --ui-ink-strong: #ffffff;
+  --ui-ink-secondary: #ffffff;
+  --ui-ink-muted: #f0f0f0;
+  --ui-line: #ffffff;
+  --ui-line-strong: #ffffff;
+  --ui-accent: #ffe45a;
+  --ui-accent-strong: #fff08e;
+  --ui-accent-ink: #000000;
+  --ui-accent-soft: #2f2900;
+  --ui-focus: #ffe45a;
+  --ui-positive: #7dffcb;
+  --ui-positive-soft: #003d2a;
+  --ui-warning: #ffe45a;
+  --ui-warning-soft: #352b00;
+  --ui-negative: #ffb2bd;
+  --ui-negative-soft: #410010;
+  --ui-shadow-sm: none;
+  --ui-shadow-lg: none;
+  --ui-wash: none;
+}
+
+:root[data-accent="violet"]:not([data-theme="contrast"]) {
+  --ui-accent: #704dde;
+  --ui-accent-strong: #5831c7;
+  --ui-accent-soft: #f0ebff;
+  --ui-focus: #704dde;
+}
+:root[data-accent="jade"]:not([data-theme="contrast"]) {
+  --ui-accent: #087c6b;
+  --ui-accent-strong: #006756;
+  --ui-accent-soft: #e0f7ef;
+  --ui-focus: #087c6b;
+}
+:root[data-accent="amber"]:not([data-theme="contrast"]) {
+  --ui-accent: #98600c;
+  --ui-accent-strong: #784807;
+  --ui-accent-soft: #fff2d7;
+  --ui-focus: #98600c;
+}
+:root[data-theme="dark"][data-accent="violet"] {
+  --ui-accent: #b5a0ff;
+  --ui-accent-strong: #d0c4ff;
+  --ui-accent-soft: #38305c;
+  --ui-focus: #b5a0ff;
+}
+:root[data-theme="dark"][data-accent="jade"] {
+  --ui-accent: #70dcc3;
+  --ui-accent-strong: #a0f3dc;
+  --ui-accent-soft: #20473f;
+  --ui-focus: #70dcc3;
+}
+:root[data-theme="dark"][data-accent="amber"] {
+  --ui-accent: #f7c775;
+  --ui-accent-strong: #ffdc9d;
+  --ui-accent-soft: #463924;
+  --ui-focus: #f7c775;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ui-motion-fast: 0ms;
+    --ui-motion-normal: 0ms;
+  }
+}
