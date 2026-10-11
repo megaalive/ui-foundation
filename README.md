@@ -6,7 +6,7 @@ A small, framework-independent design foundation for the megaalive projects.
 
 ## Start here
 
-Open `index.html` directly, or serve the directory with any static HTTP server:
+Serve the directory with any static HTTP server (the demo uses ES modules and should not be opened via `file://`):
 
 ```sh
 python3 -m http.server 8080

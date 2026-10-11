@@ -15,8 +15,12 @@ function isAllowed(values, value) {
 export function initAppearance({
   root = document.documentElement,
   surface = document.querySelector(".ui-root"),
-  storage = typeof window !== "undefined" ? window.localStorage : null
+  storage
 } = {}) {
+  if (storage === undefined) {
+    try { storage = typeof window !== "undefined" ? window.localStorage : null; }
+    catch { storage = null; }
+  }
   if (!root || !surface) throw new Error("UI Foundation requires root and .ui-root surface");
 
   const defaults = { theme: "system", accent: "blue", profile: "studio" };

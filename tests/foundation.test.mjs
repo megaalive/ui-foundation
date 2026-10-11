@@ -182,3 +182,16 @@ test("appearance handles corrupt settings and unavailable localStorage", () => {
     appearance.destroy();
   });
 });
+
+test("appearance helper handles a blocked localStorage property getter", () => {
+  const env = environment({ dark: true });
+  withBrowserStubs(env, () => {
+    Object.defineProperty(globalThis.window, "localStorage", {
+      get() { throw Error("Local storage blocked"); }
+    });
+    const appearance = initAppearance({ root: env.root, surface: env.surface });
+    assert.equal(appearance.get().resolvedTheme, "dark");
+    assert.equal(appearance.set({ accent: "amber" }).accent, "amber");
+    appearance.destroy();
+  });
+});

@@ -102,12 +102,16 @@ function closeMenu() {
 menuButton.addEventListener("click", () => {
   const open = sidebar.classList.toggle("is-open");
   menuButton.setAttribute("aria-expanded", String(open));
+  if (open) sidebar.querySelector('a[href^="#"]')?.focus();
 });
 sidebar.addEventListener("click", (event) => {
   if (event.target.closest('a[href^="#"]')) closeMenu();
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeMenu();
+  if (event.key === "Escape" && sidebar.classList.contains("is-open")) {
+    closeMenu();
+    menuButton.focus();
+  }
 });
 document.addEventListener("click", (event) => {
   if (sidebar.classList.contains("is-open") &&
